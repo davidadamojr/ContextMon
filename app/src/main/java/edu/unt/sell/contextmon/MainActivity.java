@@ -36,8 +36,8 @@ public class MainActivity extends ActionBarActivity {
         // long interval = 14400000;
         long interval = 10000;
         long triggerTime = elapsedRealtime() + interval;
-        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME,
-                triggerTime, AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, triggerTime, AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+        // alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, triggerTime, interval, pendingIntent);
 
         mService = new Intent(this, BroadcastMonitoringService.class);
         startService(mService);

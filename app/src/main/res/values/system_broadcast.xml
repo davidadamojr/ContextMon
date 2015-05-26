@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="system_broadcast">
-        <item>android.app.action.ACTION_PASSWORD_CHANGED</item>
+        <!--<item>android.app.action.ACTION_PASSWORD_CHANGED</item>
         <item>android.app.action.ACTION_PASSWORD_EXPIRING</item>
         <item>android.app.action.ACTION_PASSWORD_FAILED</item>
         <item>android.app.action.ACTION_PASSWORD_SUCCEEDED</item>
         <item>android.app.action.DEVICE_ADMIN_DISABLED</item>
         <item>android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED</item>
-        <item>android.app.action.DEVICE_ADMIN_ENABLED</item>
+        <item>android.app.action.DEVICE_ADMIN_ENABLED</item>-->
+        <item>android.app.action.NEXT_ALARM_CLOCK_CHANGED</item>
         <item>android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED</item>
         <item>android.bluetooth.a2dp.profile.action.PLAYING_STATE_CHANGED</item>
         <item>android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED</item>
@@ -24,6 +25,7 @@
         <item>android.bluetooth.device.action.FOUND</item>
         <item>android.bluetooth.device.action.NAME_CHANGED</item>
         <item>android.bluetooth.device.action.UUID</item>
+        <item>android.bluetooth.device.action.PAIRING_REQUEST</item>
         <item>android.bluetooth.devicepicker.action.DEVICE_SELECTED</item>
         <item>android.bluetooth.devicepicker.action.LAUNCH</item>
         <item>android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT</item>
@@ -34,6 +36,10 @@
         <item>android.hardware.action.NEW_VIDEO</item>
         <item>android.hardware.action.NEW_PICTURE</item>
         <item>android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS</item>
+        <item>android.hardware.usb.action.USB_ACCESSORY_ATTACHED</item>
+        <item>android.hardware.usb.action.USB_ACCESSORY_DETACHED</item>
+        <item>android.hardware.usb.action.USB_DEVICE_ATTACHED</item>
+        <item>android.hardware.usb.action.USB_DEVICE_DETACHED</item>
         <item>android.intent.action.ACTION_POWER_CONNECTED</item>
         <item>android.intent.action.ACTION_POWER_DISCONNECTED</item>
         <item>android.intent.action.ACTION_SHUTDOWN</item>
@@ -44,12 +50,16 @@
         <item>android.intent.action.BOOT_COMPLETED</item>
         <item>android.intent.action.CAMERA_BUTTON</item>
         <item>android.intent.action.CONFIGURATION_CHANGED</item>
+        <item>android.intent.action.DATA_SMS_RECEIVED</item>
         <item>android.intent.action.DATE_CHANGED</item>
         <item>android.intent.action.DEVICE_STORAGE_LOW</item>
         <item>android.intent.action.DEVICE_STORAGE_OK</item>
         <item>android.intent.action.DOCK_EVENT</item>
+        <item>android.intent.action.DOWNLOAD_COMPLETE</item>
+        <item>android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED</item>
         <item>android.intent.action.DREAMING_STARTED</item>
         <item>android.intent.action.DREAMING_STOPPED</item>
+        <item>android.intent.action.EVENT_REMINDER</item>
         <item>android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE</item>
         <item>android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE</item>
         <item>android.intent.action.FETCH_VOICEMAIL</item>
@@ -75,7 +85,7 @@
         <item>android.intent.action.MY_PACKAGE_REPLACED</item>
         <item>android.intent.action.NEW_OUTGOING_CALL</item>
         <item>android.intent.action.NEW_VOICEMAIL</item>
-        <item>android.intent.action.PACKAGE_ADDED</item>
+        <!--<item>android.intent.action.PACKAGE_ADDED</item>
         <item>android.intent.action.PACKAGE_CHANGED</item>
         <item>android.intent.action.PACKAGE_DATA_CLEARED</item>
         <item>android.intent.action.PACKAGE_FIRST_LAUNCH</item>
@@ -85,7 +95,7 @@
         <item>android.intent.action.PACKAGE_REMOVED</item>
         <item>android.intent.action.PACKAGE_REPLACED</item>
         <item>android.intent.action.PACKAGE_RESTARTED</item>
-        <item>android.intent.action.PACKAGE_VERIFIED</item>
+        <item>android.intent.action.PACKAGE_VERIFIED</item>-->
         <item>android.intent.action.PHONE_STATE</item>
         <item>android.intent.action.PROVIDER_CHANGED</item>
         <item>android.intent.action.PROXY_CHANGE</item>
@@ -98,8 +108,11 @@
         <item>android.intent.action.UID_REMOVED</item>
         <item>android.intent.action.USER_PRESENT</item>
         <item>android.intent.action.WALLPAPER_CHANGED</item>
+        <item>android.location.MODE_CHANGED</item>
+        <item>android.location.PROVIDERS_CHANGED</item>
         <item>android.media.ACTION_SCO_AUDIO_STATE_UPDATED</item>
         <item>android.media.AUDIO_BECOMING_NOISY</item>
+        <item>android.media.action.HDMI_AUDIO_PLUG</item>
         <item>android.media.RINGER_MODE_CHANGED</item>
         <item>android.media.SCO_AUDIO_STATE_CHANGED</item>
         <item>android.media.VIBRATE_SETTING_CHANGED</item>
@@ -107,6 +120,7 @@
         <item>android.media.action.OPEN_AUDIO_EFFECT_CONTROL_SESSION</item>
         <item>android.net.conn.BACKGROUND_DATA_SETTING_CHANGED</item>
         <item>android.net.nsd.STATE_CHANGED</item>
+        <item>android.net.conn.CONNECTIVITY_CHANGE</item>
         <item>android.net.wifi.NETWORK_IDS_CHANGED</item>
         <item>android.net.wifi.RSSI_CHANGED</item>
         <item>android.net.wifi.SCAN_RESULTS</item>
@@ -119,8 +133,17 @@
         <item>android.net.wifi.p2p.THIS_DEVICE_CHANGED</item>
         <item>android.net.wifi.supplicant.CONNECTION_CHANGE</item>
         <item>android.net.wifi.supplicant.STATE_CHANGE</item>
+        <item>android.provider.Telephony.SIM_FULL</item>
+        <item>android.provider.Telephony.SMS_DELIVER</item>
+        <item>android.provider.Telephony.SMS_RECEIVED</item>
+        <item>android.provider.Telephony.SMS_REJECTED</item>
         <item>android.speech.tts.TTS_QUEUE_PROCESSING_COMPLETED</item>
         <item>android.speech.tts.engine.TTS_DATA_INSTALLED</item>
         <item>android.net.conn.CONNECTIVITY_CHANGE</item>
+
+        <item>android.nfc.action.ADAPTER_STATE_CHANGED</item>
+        <item>vnd.google.fitness.TRACK</item>
+        <item>vnd.google.fitness.VIEW</item>
+        <item>vnd.google.fitness.VIEW_GOAL</item>
     </string-array>
 </resources>
