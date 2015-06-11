@@ -27,9 +27,13 @@ public class SyncService extends IntentService {
         final BroadcastDatabaseHelper database = new BroadcastDatabaseHelper(getApplicationContext());
         AsyncHttpClient client = new SyncHttpClient();
         RequestParams params = new RequestParams();
-        String broadcastJSON = database.composeJSONfromSQLite();
+        boolean isTablet = getResources().getBoolean(R.bool.isTablet);
+        String broadcastJSON = database.composeJSONfromSQLite(isTablet);
+        Log.i(TAG, broadcastJSON);
         if (!broadcastJSON.equals("[]")) {
-            params.put("broadcasts_json", database.composeJSONfromSQLite());
+            params.put("broadcasts_json", broadcastJSON);
+            String endpoint = "http://www.cliptext.co/contextmon_sync/endpoint.php";
+            // String endpoint = "http://10.0.3.2/html/contextmon_sync/endpoint.php";
             client.post("http://www.cliptext.co/contextmon_sync/endpoint.php", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

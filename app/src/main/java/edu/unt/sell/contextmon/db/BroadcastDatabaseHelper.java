@@ -47,7 +47,7 @@ public class BroadcastDatabaseHelper extends SQLiteOpenHelper {
     }
 
     // compose JSON out of SQLite records in addition to device id and android version
-    public String composeJSONfromSQLite() {
+    public String composeJSONfromSQLite(boolean isTablet) {
         String deviceId = Secure.getString(mContext.getContentResolver(), Secure.ANDROID_ID);
         String androidVersion = Build.VERSION.RELEASE;
         ArrayList<HashMap<String, String>> broadcastList;
@@ -64,6 +64,11 @@ public class BroadcastDatabaseHelper extends SQLiteOpenHelper {
                 map.put("timestamp", cursor.getString(3));
                 map.put("device_id", deviceId);
                 map.put("android_version", androidVersion);
+                if (isTablet) {
+                    map.put("is_tablet", "1");
+                } else {
+                    map.put("is_tablet", "0");
+                }
                 broadcastList.add(map);
 
                 mSyncList.add(Integer.parseInt(cursor.getString(0)));
