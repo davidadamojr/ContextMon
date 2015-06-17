@@ -32,9 +32,9 @@ public class SyncService extends IntentService {
         Log.i(TAG, broadcastJSON);
         if (!broadcastJSON.equals("[]")) {
             params.put("broadcasts_json", broadcastJSON);
-            String endpoint = "http://www.cliptext.co/contextmon_sync/endpoint.php";
+            String endpoint = "";
             // String endpoint = "http://10.0.3.2/html/contextmon_sync/endpoint.php";
-            client.post("http://www.cliptext.co/contextmon_sync/endpoint.php", params, new AsyncHttpResponseHandler() {
+            client.post("", params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     Log.i(TAG, responseBody.toString());
